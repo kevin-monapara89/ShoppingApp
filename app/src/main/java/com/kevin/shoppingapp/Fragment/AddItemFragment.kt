@@ -56,10 +56,7 @@ class AddItemFragment : Fragment() {
             }.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
 
-                    if (binding.producttitle.toString().isEmpty() || binding.productdesc.toString()
-                            .isEmpty() || binding.productcategory.toString()
-                            .isEmpty() || binding.productprice.toString()
-                            .isEmpty() || binding.productrateing.toString().isEmpty()
+                    if (binding.producttitle.text.toString().isEmpty() || binding.productdesc.text.toString().isEmpty() || binding.productcategory.text.toString().isEmpty() || binding.productprice.text.toString().isEmpty() || binding.productrateing.text.toString().isEmpty()
                     ) {
                         Toast.makeText(context, "Please enter data", Toast.LENGTH_SHORT).show()
                     } else {
@@ -76,9 +73,7 @@ class AddItemFragment : Fragment() {
                             ShoppingModel(key!!, title, desc, category, price, rateing, image)
 
                         dbRef.root.child("Shopping").child(key).setValue(data)
-                        Toast.makeText(context, "Data Upload Succesfully", Toast.LENGTH_SHORT)
-                            .show()
-
+                        Toast.makeText(context, "Data Upload Succesfully", Toast.LENGTH_SHORT).show()
                         binding.producttitle.setText("")
                         binding.productdesc.setText("")
                         binding.productcategory.setText("")
