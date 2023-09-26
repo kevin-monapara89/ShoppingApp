@@ -1,16 +1,14 @@
-package com.kevin.shoppingapp
+package com.kevin.shoppingapp.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.OnBackPressedCallback
 import com.bumptech.glide.Glide
-import com.kevin.shoppingapp.Activity.MainActivity
 import com.kevin.shoppingapp.databinding.ActivityItemShowBinding
 
 class ItemShowActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityItemShowBinding
+    lateinit var binding: ActivityItemShowBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityItemShowBinding.inflate(layoutInflater)
@@ -30,7 +28,7 @@ class ItemShowActivity : AppCompatActivity() {
         binding.txtprice.text = price
         binding.txtrateing.text = rateing
 
-        binding.btnback.setOnClickListener{
+        binding.btnback.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

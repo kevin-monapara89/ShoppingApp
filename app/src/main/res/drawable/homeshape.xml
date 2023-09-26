@@ -5,9 +5,9 @@
         android:bottomLeftRadius="@dimen/_40sdp"
         tools:ignore="StateListReachable" />
 
-    <gradient android:startColor="#00A3D4"
-        android:centerColor="#3987FB"
+    <gradient android:startColor="#E91E63"
+        android:centerColor="#4D1685"
         android:angle="165"
-        android:endColor="#6467FD"/>
+        android:endColor="#2A0767"/>
 
 </shape>

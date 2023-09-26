@@ -21,7 +21,7 @@ class ShoppingModel {
         rateing: String,
         image: String,
 
-    ) {
+        ) {
         this.key = key
         this.title = title
         this.description = description

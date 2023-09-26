@@ -10,7 +10,7 @@ import com.kevin.shoppingapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityMainBinding
+    lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         replaceFragment(ItemShowFragment())
         binding.bottom.setOnItemSelectedListener {
-            when(it.itemId) {
+            when (it.itemId) {
                 R.id.home -> replaceFragment(ItemShowFragment())
                 R.id.add -> replaceFragment(AddItemFragment())
 
@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
             true
         }
     }
+
     private fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().replace(R.id.fragpageview,fragment).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.fragpageview, fragment).commit()
     }
 }

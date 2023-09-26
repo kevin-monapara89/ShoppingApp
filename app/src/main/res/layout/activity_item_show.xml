@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#C1C0C0"
     android:orientation="vertical"
-    tools:context=".ItemShowActivity">
+    tools:context=".Activity.ItemShowActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -48,79 +48,79 @@
 
             <TextView
                 android:id="@+id/txttitle"
+                style="@style/TextColorStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Iphone 16 Pro Max"
-                style="@style/TextColorStyle"
                 android:textSize="@dimen/_23sdp"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_gravity="center">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_20sdp"
-                app:cardCornerRadius="@dimen/_4sdp"
                 android:layout_gravity="center"
-                app:cardBackgroundColor="#E91E63">
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="#E91E63"
+                    app:cardCornerRadius="@dimen/_4sdp">
+
+                    <TextView
+                        android:id="@+id/txtcategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:layout_marginRight="@dimen/_7sdp"
+                        android:text="Mobile"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/txtcategory"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mobile"
-                    android:textStyle="bold"
                     android:layout_gravity="center"
-                    android:textColor="@color/white"
-                    android:layout_marginLeft="@dimen/_7sdp"
-                    android:layout_marginRight="@dimen/_7sdp"
-                    android:textSize="@dimen/_16sdp"/>
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="★"
+                    android:textColor="#FFC107"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
 
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="★"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:gravity="right"
-                android:layout_weight="1"
-                android:textColor="#FFC107"
-                android:textSize="@dimen/_20sdp"/>
-
-            <TextView
-                android:id="@+id/txtrateing"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="5"
-                style="@style/TextColorStyle"
-                android:layout_gravity="center"
-                android:paddingLeft="@dimen/_4sdp"
-                android:textSize="@dimen/_20sdp"/>
+                <TextView
+                    android:id="@+id/txtrateing"
+                    style="@style/TextColorStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/_4sdp"
+                    android:text="5"
+                    android:textSize="@dimen/_20sdp" />
 
             </LinearLayout>
 
             <TextView
+                style="@style/TextColorStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:text="Description : "
-style="@style/TextColorStyle"
                 android:textSize="@dimen/_16sdp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtdescription"
+                style="@style/DescriptioncolorStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="abcdefghijklmnopqrstuvwxyz"
-                style="@style/DescriptioncolorStyle"
                 android:textSize="@dimen/_18sdp" />
 
             <LinearLayout
@@ -131,20 +131,20 @@ style="@style/TextColorStyle"
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/TextColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹ "
-                    style="@style/TextColorStyle"
                     android:textSize="@dimen/_20sdp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtprice"
+                    style="@style/TextColorStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="2,00,000"
-                    style="@style/TextColorStyle"
                     android:textSize="@dimen/_20sdp"
                     android:textStyle="bold" />
 

@@ -14,15 +14,15 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom"
+            style="@style/TextColorStyle"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            style="@style/TextColorStyle"
             android:layout_gravity="bottom"
-            app:menu="@menu/item"/>
+            app:menu="@menu/item" />
 
     </FrameLayout>
 

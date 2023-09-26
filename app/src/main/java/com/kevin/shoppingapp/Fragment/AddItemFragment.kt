@@ -19,7 +19,7 @@ import com.kevin.shoppingapp.databinding.FragmentAddItemBinding
 
 class AddItemFragment : Fragment() {
 
-    lateinit var binding : FragmentAddItemBinding
+    lateinit var binding: FragmentAddItemBinding
     lateinit var uri: Uri
     val IMAGE_CODE = 8
     lateinit var storageRef: StorageReference
@@ -38,7 +38,7 @@ class AddItemFragment : Fragment() {
 
             var intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "image/*"
-            startActivityForResult(intent,IMAGE_CODE)
+            startActivityForResult(intent, IMAGE_CODE)
         }
 
         binding.uploaddata.setOnClickListener {
@@ -56,7 +56,11 @@ class AddItemFragment : Fragment() {
             }.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
 
-                    if (binding.producttitle.toString().isEmpty() || binding.productdesc.toString().isEmpty() || binding.productcategory.toString().isEmpty() || binding.productprice.toString().isEmpty() || binding.productrateing.toString().isEmpty()) {
+                    if (binding.producttitle.toString().isEmpty() || binding.productdesc.toString()
+                            .isEmpty() || binding.productcategory.toString()
+                            .isEmpty() || binding.productprice.toString()
+                            .isEmpty() || binding.productrateing.toString().isEmpty()
+                    ) {
                         Toast.makeText(context, "Please enter data", Toast.LENGTH_SHORT).show()
                     } else {
                         val downloadUri = task.result
@@ -68,10 +72,12 @@ class AddItemFragment : Fragment() {
                         var price = binding.productprice.text.toString()
                         var rateing = binding.productrateing.text.toString()
                         var image = downloadUri.toString()
-                        var data = ShoppingModel(key!!, title, desc, category, price, rateing , image)
+                        var data =
+                            ShoppingModel(key!!, title, desc, category, price, rateing, image)
 
                         dbRef.root.child("Shopping").child(key).setValue(data)
-                        Toast.makeText(context, "Data Upload Succesfully", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Data Upload Succesfully", Toast.LENGTH_SHORT)
+                            .show()
 
                         binding.producttitle.setText("")
                         binding.productdesc.setText("")

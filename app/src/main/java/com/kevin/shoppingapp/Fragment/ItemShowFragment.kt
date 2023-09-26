@@ -17,7 +17,7 @@ import com.kevin.shoppingapp.databinding.FragmentItemShowBinding
 
 class ItemShowFragment : Fragment() {
 
-    lateinit var binding : FragmentItemShowBinding
+    lateinit var binding: FragmentItemShowBinding
     var adapter = ItemAdapter()
     var shoppinglist = ArrayList<ShoppingModel>()
     lateinit var dbRef: DatabaseReference
@@ -51,10 +51,11 @@ class ItemShowFragment : Fragment() {
                 }
                 adapter.update(shoppinglist)
             }
+
             override fun onCancelled(error: DatabaseError) {
 
             }
         })
     }
 
-    }
+}

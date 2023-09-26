@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
-import com.kevin.shoppingapp.ItemShowActivity
+import com.kevin.shoppingapp.Activity.ItemShowActivity
 import com.kevin.shoppingapp.Model.ShoppingModel
 import com.kevin.shoppingapp.databinding.ShopingitemBinding
 
@@ -55,6 +55,7 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ItemHolder>() {
             }
         }
     }
+
     fun update(shoppinglist: ArrayList<ShoppingModel>) {
         this.shoppinglist = shoppinglist
         notifyDataSetChanged()

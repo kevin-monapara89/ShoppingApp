@@ -1,5 +1,6 @@
 package com.kevin.shoppingapp.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.FirebaseApp
@@ -9,7 +10,7 @@ import com.kevin.shoppingapp.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityLoginBinding
+    lateinit var binding: ActivityLoginBinding
     lateinit var auth: FirebaseAuth
     val Req_Code: Int = 123
 
@@ -26,17 +27,13 @@ class LoginActivity : AppCompatActivity() {
 
     private fun initView() {
 
-            binding.forgetpass.setOnClickListener {
-                var email = binding.email.text.toString()
-
-                auth.sendPasswordResetEmail(email)
-            }
-            binding.login.setOnClickListener {
-
-                var email = binding.email.text.toString()
-                var password = binding.password.text.toString()
-
-            }
-
+        binding.forgetpass.setOnClickListener {
+            var email = binding.email.text.toString()
+            auth.sendPasswordResetEmail(email)
+        }
+        binding.login.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

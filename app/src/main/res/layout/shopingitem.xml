@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ColorStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/_5sdp"
-    app:cardCornerRadius="@dimen/_6sdp"
-    style="@style/ColorStyle"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    app:cardCornerRadius="@dimen/_6sdp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,10 +16,10 @@
             android:id="@+id/imgposter"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_130sdp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/img"
             android:layout_margin="@dimen/_3sdp"
-            android:background="#F1EFEF"/>
+            android:background="#F1EFEF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img" />
 
         <LinearLayout
             android:id="@+id/content"
@@ -30,91 +30,91 @@
 
             <TextView
                 android:id="@+id/txttitle"
+                style="@style/TextColorStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Iphone 16 Pro Max"
-                android:textStyle="bold"
-                style="@style/TextColorStyle"
-                android:textSize="@dimen/_15sdp"/>
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtdescription"
+                style="@style/DescriptioncolorStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="abcdefghijklmnopqrstuvwxyz"
                 android:layout_marginTop="@dimen/_3sdp"
-                style="@style/DescriptioncolorStyle"
                 android:layout_marginBottom="@dimen/_3sdp"
-                android:textSize="@dimen/_12sdp"/>
+                android:text="abcdefghijklmnopqrstuvwxyz"
+                android:textSize="@dimen/_12sdp" />
 
             <LinearLayout
-                android:layout_width="match_parent"
                 android:id="@+id/newsitem"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
+                    style="@style/TextColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹"
-                    android:textStyle="bold"
-                    style="@style/TextColorStyle"
-                    android:textSize="@dimen/_16sdp"/>
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtprice"
+                    style="@style/TextColorStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textStyle="bold"
                     android:text="2,00,000"
-                    style="@style/TextColorStyle"
-                    android:textSize="@dimen/_16sdp"/>
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="★"
-                    android:textStyle="bold"
                     android:textColor="#FFC107"
-                    android:textSize="@dimen/_15sdp"/>
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtrateing"
+                    style="@style/TextColorStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="5"
                     android:maxLength="1"
                     android:paddingLeft="@dimen/_4sdp"
-                    style="@style/TextColorStyle"
-                    android:textSize="@dimen/_14sdp"/>
+                    android:text="5"
+                    android:textSize="@dimen/_14sdp" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/_20sdp"
-                    app:cardCornerRadius="@dimen/_4sdp"
                     android:layout_gravity="center"
-                    app:cardBackgroundColor="#E91E63">
+                    app:cardBackgroundColor="#E91E63"
+                    app:cardCornerRadius="@dimen/_4sdp">
 
                     <TextView
                         android:id="@+id/txtcategory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mobile"
-                        android:textStyle="bold"
                         android:layout_gravity="center"
-                        android:textColor="@color/white"
                         android:layout_marginLeft="@dimen/_5sdp"
                         android:layout_marginRight="@dimen/_5sdp"
-                        android:textSize="@dimen/_12sdp"/>
+                        android:text="Mobile"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
 
                 </androidx.cardview.widget.CardView>
 

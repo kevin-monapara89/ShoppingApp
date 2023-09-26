@@ -9,18 +9,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_190sdp"
+        android:layout_height="@dimen/_200sdp"
         android:background="@drawable/homeshape"
         android:elevation="@dimen/_10sdp"
         android:orientation="vertical">
 
         <TextView
+            style="@style/ColorTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:gravity="center"
             android:text="Log In"
-            style="@style/TextColorStyle"
             android:textSize="@dimen/_24sdp"
             android:textStyle="bold" />
 
@@ -39,10 +39,10 @@
         android:orientation="vertical">
 
         <TextView
+            style="@style/TextColorStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enter Your Login Details :"
-            style="@style/TextColorStyle"
             android:textSize="@dimen/_13sdp"
             android:textStyle="bold" />
 
@@ -54,14 +54,14 @@
             app:cardElevation="@dimen/_3sdp">
 
 
-                <EditText
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_35sdp"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:hint="Email"
-                    android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:hint="Email"
+                android:textColor="@color/black" />
 
 
         </androidx.cardview.widget.CardView>
@@ -74,26 +74,27 @@
             app:cardCornerRadius="@dimen/_20sdp"
             app:cardElevation="@dimen/_3sdp">
 
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_35sdp"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:hint="Password"
-                    android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:hint="Password"
+                android:inputType="textPassword" />
 
 
         </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/forgetpass"
+            style="@style/TextColorStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
             android:gravity="left"
             android:text="Forgeet Password?"
-            style="@style/TextColorStyle"
             android:textSize="@dimen/_10sdp"
             android:textStyle="bold" />
 
@@ -131,12 +132,12 @@
                 android:background="@color/black" />
 
             <TextView
+                style="@style/TextColorStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/_5sdp"
                 android:text="OR"
-                style="@style/TextColorStyle"
                 android:textSize="@dimen/_10sdp"
                 android:textStyle="bold" />
 
@@ -152,9 +153,9 @@
         <com.google.android.gms.common.SignInButton
             android:id="@+id/googlesignin"
             android:layout_width="@dimen/_100sdp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:layout_height="50dp" />
+            android:layout_marginTop="@dimen/_15sdp" />
 
     </LinearLayout>
 
